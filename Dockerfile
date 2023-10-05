@@ -1,4 +1,5 @@
 FROM golang:alpine
-WORKDIR /app
+WORKDIR /go
+EXPOSE 8080
 RUN go install github.com/acheong08/EdgeGPT-Proxy@latest
-CMD EdgeGPT-Proxy
+CMD /go/bin/EdgeGPT-Proxy
